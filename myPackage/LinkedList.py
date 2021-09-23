@@ -38,6 +38,8 @@ class LinkedList:
         return None
 
     def deleteNode( self, val ):
+        if self.head == None:
+            return None
         current = self.head
         previous = self.head
         if self.head.val == val:
@@ -50,3 +52,6 @@ class LinkedList:
             if current != None:
                 previous.next = current.next
                 current.next = None
+
+    def insertAtPosition( self, index, val ):
+        pass
