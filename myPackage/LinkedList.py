@@ -53,5 +53,24 @@ class LinkedList:
                 previous.next = current.next
                 current.next = None
 
+    def length( self ):
+        current = self.head;
+        count = 0
+        while current != None:
+            count += 1
+            current = current.next
+        return count
+
     def insertAtPosition( self, index, val ):
-        pass
+        newNode = Node( val )
+        if index <= self.length():
+            if index == 0:
+                self.insertFirst( val )
+            else:
+                count = 0
+                current = self.head
+                while count < index - 1:
+                    count += 1
+                    current = current.next
+                newNode.next = current.next
+                current.next = newNode

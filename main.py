@@ -5,12 +5,11 @@ listOfNumbers = LinkedList()
 
 # Adding the first node to the list
 listOfNumbers.insertLast( 10 )
+listOfNumbers.insertLast( 5 )
+listOfNumbers.insertLast( 20 )
+listOfNumbers.insertLast( 15 )
 listOfNumbers.insertLast( 30 )
-listOfNumbers.insertLast( 50 )
-listOfNumbers.insertLast( 80 )
-listOfNumbers.insertFirst( 100 )
 
+listOfNumbers.insertAtPosition( 5, 50 )
 listOfNumbers.printList()
-print( "------" )
-listOfNumbers.deleteNode( 80 )
-listOfNumbers.printList()
+
