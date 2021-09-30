@@ -4,14 +4,19 @@ from myPackage.LinkedList import LinkedList
 listOfNumbers = LinkedList()
 
 # Adding the first node to the list
-listOfNumbers.insertLast( 10 )
 listOfNumbers.insertLast( 5 )
-listOfNumbers.insertLast( 20 )
-listOfNumbers.insertLast( 15 )
-listOfNumbers.insertLast( 30 )
+listOfNumbers.insertLast( 8 )
+listOfNumbers.insertLast( 10 )
+listOfNumbers.insertLast( 2 )
+listOfNumbers.insertLast( 1 )
+listOfNumbers.insertLast( 3 )
 
-listOfNumbers.insertAtPosition( 5, 50 )
+
+listOfNumbers.moveHighestToLast()
+
 listOfNumbers.printList()
+
+
 
 
 # Find the maximun value inside a list of numbers and move it to the last node

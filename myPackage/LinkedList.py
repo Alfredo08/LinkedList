@@ -74,3 +74,24 @@ class LinkedList:
                     current = current.next
                 newNode.next = current.next
                 current.next = newNode
+
+    def moveHighestToLast( self ):
+        if self.length() > 1:
+            max = self.head
+            current = self.head
+            prevToMax = self.head
+            prevToCurrent = self.head
+            
+            while current.next != None:
+                prevToCurrent = current
+                current = current.next
+                if current.val > max.val:
+                    max = current
+                    prevToMax = prevToCurrent
+
+            if self.head.val == max.val:
+                self.head = self.head.next
+            if max.val != current.val:
+                prevToMax.next = max.next
+                current.next = max
+                max.next = None
